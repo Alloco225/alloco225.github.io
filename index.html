@@ -19,7 +19,7 @@
     <style>
         :root {
             --rose: #fe23aad7;
-            --rose-pur: #f71559d7;
+            --rose-pur: rgba(246, 23, 90, 0.843);
         }
 
         @media screen and (max-width:521px) {
@@ -75,17 +75,25 @@
             .sweet-text .text-romaji {
                 display: none;
             }
-            .sweet-text .love {
-                color: var(--rose);
+            .love-text {
+                color: red;
                 font-size: 1.6em;
+                background-color: rgba(0, 0, 0, .3);
+                text-align: center;
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                width: 100%;
+                transform: translateX(-50%);
             }
             .madalove {
-                height: 50vh;
                 background-image: url('img/madalove.jpg');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
+                height: 50vh;
+                position: relative;
             }
             footer {
                 background-color: lightcoral;
@@ -162,12 +170,13 @@
                 (•̀ᴗ•́)و.
 
             </div>
-            <span class="love">Happy Valentines mi Pewie<i class=""></i></span>
+
         </div>
     </main>
     <div class="madalove">
-
+        <span class="sweet-text love-text">Happy Valentines mi Pewie<i class=""></i></span>
     </div>
+
     <footer>
         <p><span class="animated rose-pur">(っ˘з(˘⌣˘ ) ♡</span> your Alloco qui te love</p>
         <!-- &#10084; -->
