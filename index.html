@@ -7,20 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Indie+Flower" rel="stylesheet">
 </head>
 
 <body>
     <style>
         :root {
             --rose: #fe23aad7;
-            ;
         }
 
         @media screen and (max-width: 425px) {}
 
+        html {
+            background-color: #eee;
+            height: 100%;
+        }
+
         body {
-            padding: 20px;
-            background-color: red;
+            height: 100%;
+            width: 521px;
+            background-color: lightcoral;
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: Helvetica, sans-serif;
+            display: grid;
+            /* grid-template-columns: 100vh; */
+            grid-template-rows: 5vw auto 5vw;
+            grid-template-columns: auto;
+            grid-template-areas: "nav" "main" "footer";
+        }
+
+        nav {
+            grid-area: "nav";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Coiny', cursive;
+
+        }
+
+        main {
+            height: 100%;
+            padding: 5px;
+            grid-area: "main";
+            background-image: url('../img/Diabetes-100.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
+        }
+
+        .sweet-text {
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+        }
+
+        footer {
+            grid-area: "footer";
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-transform: capitalize;
         }
 
         .heart:before,
@@ -51,42 +102,32 @@
             height: 50px;
         }
     </style>
-    <div class="wrapper">
-        <nav>
-            <div class="hidden">
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-            </div>
-            <div class="toggle">
 
-            </div>
-        </nav>
-        <div class="container">
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
-            <div class="heart">
-            </div>
+    <nav>
+        <h1 class="text">
+            I freakin miss u so bad
+            <i class="fa fa-heart"></i>
+        </h1>
+    </nav>
+    <main>
+        <!-- <div class="heart">
+        </div> -->
+        <div class="sweet-text">
+            Kawaii deeto ni sasou to omotteta kedo yappa murine, Otagai shuuchuu shinakya koto ga ooku naru ippou de, issho ni sugoseru
+            jikan ga dondon nakunatteru. ikkagetsu ni sankai, sankagetsu ni nikai, mou hay nen ni ichido shika aenai toki
+            mo kuru darou. Sou omoitsukeru toki wa oira no koto wa marude kanau hazu no nai you na yume danaa tte kiga suru.
+            Sonna toki wa omae wo ubatte, kono shakai no juuka ya kitai kara tooku hanareta basho ni tsurete ikitaku naru,
+            demo sore mo murine. Dou shiyou mo nakute kurushii yo, tsutae kirenai hodo ni na. Zutto sobba ni itai, eien ni
+            dakishimete, shita ga tabemono wo ajiwaenakunaru hodo omae no vglucose taetai. Tsumari sa, mou wakatteru darou
+            kedo, iitai no wa omae wo aishiteru tte koto yo baka keytchup. Ima made aishite kurete arigatou, sono wo yoku
+            kaesanakatta toki wa gomen. Kore kara mo, konna ore de yokereba yoroshiku ne. Ore wa itsu mademo omae de ii nda
+            yo, donna sugata demo, nan nen tattemo na. Isho ni kono kanau hazu no nai yume wo kanawasete misero na. Aishiteru
+            na.
         </div>
-    </div>
+    </main>
+    <footer>
+        <p>Made with <span class="animated red">&#10084;</span> by your Alloco</p>
+    </footer>
 
 </body>
 
