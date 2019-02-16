@@ -10,123 +10,165 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Coiny|Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Indie+Flower|Pacifico" rel="stylesheet">
 </head>
 
 <body>
     <style>
         :root {
             --rose: #fe23aad7;
+            --rose-pur: #f71559d7;
         }
 
-        @media screen and (max-width: 425px) {}
+        @media screen and (max-width:521px) {
+            html {
+                height: 100%;
+            }
 
-        html {
-            background-color: #eee;
-            height: 100%;
-        }
+            body {
+                height: 100%;
+                margin: auto;
+                text-transform: uppercase;
+                font-family: Helvetica, sans-serif;
+                display: grid;
+                /* grid-template-columns: 100vh; */
+                grid-template-rows: auto auto auto;
+                grid-template-columns: auto;
+                grid-template-areas: "nav" "main" "footer";
+            }
 
-        body {
-            height: 100%;
-            width: 521px;
-            background-color: lightcoral;
-            margin: auto;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: Helvetica, sans-serif;
-            display: grid;
-            /* grid-template-columns: 100vh; */
-            grid-template-rows: 5vw auto 5vw;
-            grid-template-columns: auto;
-            grid-template-areas: "nav" "main" "footer";
-        }
+            nav {
+                grid-area: "nav";
+                padding: 5px;
+                text-align: center;
+                background-color: var(--rose);
 
-        nav {
-            grid-area: "nav";
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Coiny', cursive;
+            }
+            nav h2 {
+                font-family: 'Indie Flower', cursive;
+                font-weight: bold;
+                font-size: 1em;
+                /* transform: rotate(-3deg); */
+            }
 
-        }
+            main {
+                height: 100%;
+                padding: 5px;
+                grid-area: "main";
+                background-image: url('../img/Diabetes-100.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* background-attachment: fixed; */
+            }
 
-        main {
-            height: 100%;
-            padding: 5px;
-            grid-area: "main";
-            background-image: url('../img/Diabetes-100.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-attachment: fixed;
-        }
+            .sweet-text {
+                /* font-family: 'Pacifico', cursive; */
+                font-family: 'Indie Flower', cursive;
+                color: --var(rose-pur);
+                text-transform: none;
+                text-align: center;
+                font-weight: bold;
+            }
+            .sweet-text .text-romaji {
+                display: none;
+            }
+            .sweet-text .love {
+                color: var(--rose);
+                font-size: 1.6em;
+            }
+            .madalove {
+                height: 50vh;
+                background-image: url('img/madalove.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            footer {
+                background-color: lightcoral;
+                font-family: 'Coiny', cursive;
+                grid-area: "footer";
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                text-transform: capitalize;
+            }
 
-        .sweet-text {
-            font-family: 'Indie Flower', cursive;
-            font-weight: bold;
-        }
+            footer p {
+                grid-area: "footer";
+            }
+            .rose-pur {
+                color: var(--rose-pur);
+            }
 
-        footer {
-            grid-area: "footer";
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            text-transform: capitalize;
-        }
+            .heart:before,
+            .heart:after {
+                content: "";
+                background-color: pink;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+            }
 
-        .heart:before,
-        .heart:after {
-            content: "";
-            background-color: pink;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-        }
+            .heart:before {
+                top: -25px;
+                left: 0;
+            }
 
-        .heart:before {
-            top: -25px;
-            left: 0;
-        }
+            .heart:after {
+                left: -25px;
+                top: 0;
+            }
 
-        .heart:after {
-            left: -25px;
-            top: 0;
-        }
-
-        .heart {
-            background-color: pink;
-            position: relative;
-            transform: rotate(45deg);
-            width: 50px;
-            height: 50px;
+            .heart {
+                background-color: pink;
+                position: relative;
+                transform: rotate(45deg);
+                width: 50px;
+                height: 50px;
+            }
         }
     </style>
 
     <nav>
-        <h1 class="text">
-            I freakin miss u so bad
-            <i class="fa fa-heart"></i>
-        </h1>
+        <h2 class="text">
+            ヽ(♡‿♡)ノヽ(♡з♡)ノ (づ￣ ³￣)づ
+            <!-- <i class="fa fa-heart"></i> -->
+        </h2>
     </nav>
     <main>
         <!-- <div class="heart">
         </div> -->
         <div class="sweet-text">
-            Kawaii deeto ni sasou to omotteta kedo yappa murine, Otagai shuuchuu shinakya koto ga ooku naru ippou de, issho ni sugoseru
-            jikan ga dondon nakunatteru. ikkagetsu ni sankai, sankagetsu ni nikai, mou hay nen ni ichido shika aenai toki
-            mo kuru darou. Sou omoitsukeru toki wa oira no koto wa marude kanau hazu no nai you na yume danaa tte kiga suru.
-            Sonna toki wa omae wo ubatte, kono shakai no juuka ya kitai kara tooku hanareta basho ni tsurete ikitaku naru,
-            demo sore mo murine. Dou shiyou mo nakute kurushii yo, tsutae kirenai hodo ni na. Zutto sobba ni itai, eien ni
-            dakishimete, shita ga tabemono wo ajiwaenakunaru hodo omae no vglucose taetai. Tsumari sa, mou wakatteru darou
-            kedo, iitai no wa omae wo aishiteru tte koto yo baka keytchup. Ima made aishite kurete arigatou, sono wo yoku
-            kaesanakatta toki wa gomen. Kore kara mo, konna ore de yokereba yoroshiku ne. Ore wa itsu mademo omae de ii nda
-            yo, donna sugata demo, nan nen tattemo na. Isho ni kono kanau hazu no nai yume wo kanawasete misero na. Aishiteru
-            na.
+            <div class="text-romaji">
+                Kawaii deeto ni sasou to omotteta kedo yappa murine, Otagai shuuchuu shinakya koto ga ooku naru ippou de, issho ni sugoseru
+                jikan ga dondon nakunatteru. ikkagetsu ni sankai, sankagetsu ni nikai, mou hay nen ni ichido shika aenai
+                toki mo kuru darou. Sou omoitsukeru toki wa oira no koto wa marude kanau hazu no nai you na yume danaa tte
+                kiga suru. Sonna toki wa omae wo ubatte, kono shakai no juuka ya kitai kara tooku hanareta basho ni tsurete
+                ikitaku naru, demo sore mo murine. Dou shiyou mo nakute kurushii yo, tsutae kirenai hodo ni na. Zutto sobba
+                ni itai, eien ni dakishimete, shita ga tabemono wo ajiwaenakunaru hodo omae no vglucose taetai. Tsumari sa,
+                mou wakatteru darou kedo, iitai no wa omae wo aishiteru tte koto yo baka keytchup. Ima made aishite kurete
+                arigatou, sono wo yoku kaesanakatta toki wa gomen. Kore kara mo, konna ore de yokereba yoroshiku ne. Ore
+                wa itsu mademo omae de ii nda yo, donna sugata demo, nan nen tattemo na. Isho ni kono kanau hazu no nai yume
+                wo kanawasete misero na. (•̀ᴗ•́)و
+            </div>
+            <div class="text-jp">
+                可愛いデートに誘おうと思ってたけど、やっぱ無理だね。お互いやらなきゃ事が多くなる一方で、一緒に過ごせる時間がなくなってる。1ヶ月に3回、３ヶ月に2回、もはや年に1度しか会えない時も来るだろう。それを思い出す時は俺らのことをまるで叶うハズのない様な夢だなあって気がして、無力でどうしようもなくて苦しいよ、伝えきれないほどにね。お前を奪ってこの社会から遠く放れた場所に連れ去る計画も建てたことがあるw。でもそれも無理だねT.T。ずっと側にいたい、一緒に古くなりたい、舌が食べ物の味を忘れるほど毎日お前のVglucose食べたい(H過ぎかな😋)。まあ要するにお前の半分となりたい。
+                今までの全てはありがとうな、不完全な俺を愛してくれてありがとう。その愛をよく返さなかった時はゴメン。これからも、こんな俺で良ければよろしくよ。俺はいつまでもお前を好くんだよ、どんな姿でも、何年立ってもな。一緒に頑張ってこの叶うハズのない夢を叶わせてみせろな
+                (•̀ᴗ•́)و.
+
+            </div>
+            <span class="love">Happy Valentines mi Pewie<i class=""></i></span>
         </div>
     </main>
+    <div class="madalove">
+
+    </div>
     <footer>
-        <p>Made with <span class="animated red">&#10084;</span> by your Alloco</p>
+        <p><span class="animated rose-pur">(っ˘з(˘⌣˘ ) ♡</span> your Alloco qui te love</p>
+        <!-- &#10084; -->
     </footer>
 
 </body>
