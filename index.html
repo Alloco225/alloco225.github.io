@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Coiny|Indie+Flower|Pacifico" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="icon" href="img/icon.png">
 </head>
@@ -38,10 +40,25 @@
                 grid-template-columns: auto;
                 grid-template-areas: "nav" "main" "footer";
             }
+            .loader {
+                position: absolute;
+                top: 0;
+                /* right: 0;
+                bottom: 0; */
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 999;
+                background: url('img/icon.png') center no-repeat white;
+                background-size: cover;
 
+            }
             nav {
                 grid-area: "nav";
                 padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
                 text-align: center;
                 background-color: var(--rose);
 
@@ -52,7 +69,9 @@
                 font-size: 1em;
                 /* transform: rotate(-3deg); */
             }
-
+            nav span:hover {
+                color: #fff;
+            }
             main {
                 height: 100%;
                 padding: 5px;
@@ -141,12 +160,15 @@
             }
         }
     </style>
-
+    <div class="loader"></div>
     <nav>
         <h2 class="text">
             ヽ(♡‿♡)ノヽ(♡з♡)ノ (づ￣ ³￣)づ
             <!-- <i class="fa fa-heart"></i> -->
         </h2>
+        <span class="toggle-button" style="color:white;border:1px solid white;padding:5px;">
+            漢字
+        </span>
     </nav>
     <main>
         <!-- <div class="heart">
@@ -181,7 +203,15 @@
         <p><span class="animated rose-pur">(っ˘з(˘⌣˘ ) ♡</span> your Alloco qui te love</p>
         <!-- &#10084; -->
     </footer>
-
+    <script>
+        $(window).on('load', function () {
+            $('.loader').fadeOut(4000);
+        });
+        $('.toggle-button').on('click', function () {
+            $('.text-romaji').show();
+            $('.text-jp').hide();
+        });
+    </script>
 </body>
 
 </html>
