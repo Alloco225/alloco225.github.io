@@ -46,8 +46,8 @@
                 /* right: 0;
                 bottom: 0; */
                 left: 0;
-                width: 100vw;
-                height: 100vh;
+                width: 100%;
+                height: 100%;
                 z-index: 999;
                 background: url('img/icon.png') center no-repeat white;
                 background-size: cover;
@@ -60,6 +60,7 @@
                 align-items: center;
                 justify-content: space-around;
                 text-align: center;
+                color: #fff;
                 background-color: var(--rose);
 
             }
@@ -167,7 +168,7 @@
             <!-- <i class="fa fa-heart"></i> -->
         </h2>
         <span class="toggle-button" style="color:white;border:1px solid white;padding:5px;">
-            漢字
+            字/A
         </span>
     </nav>
     <main>
@@ -205,11 +206,11 @@
     </footer>
     <script>
         $(window).on('load', function () {
-            $('.loader').fadeOut(4000);
+            $('.loader').fadeOut(3000);
         });
         $('.toggle-button').on('click', function () {
-            $('.text-romaji').show();
-            $('.text-jp').hide();
+            $('.text-romaji').toggle();
+            $('.text-jp').toggle();
         });
     </script>
 </body>
